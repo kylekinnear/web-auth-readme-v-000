@@ -1,1 +1,9 @@
-
+<% if @friends.size > 0 %>
+<ul>
+  <% @friends.each do |f| %>
+    <li><%= "#{f['firstName']} #{f['lastName']}"%></li>
+  <%end%>
+</ul>
+<%else%>
+<p>Looks like you don't have any github friends yet.</p>
+<%end%>
